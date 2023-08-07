@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Change the description wrt project -->
+    <meta
+      name="description"
+      content="A Free and open-source documentation template built using html, tailwindcss and javascript."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./public/css/globle.css" />
+
+    <!-- You can add your own fonts from fonts.google.com -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Default Script tags -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function SetCookies(value) {
+        var expiryDate = new Date();
+        expiryDate.setMonth(expiryDate.getMonth() + 1);
+        document.cookie = `dark-mode=${value}; expires=${expiryDate}; path=/`;
+      }
+
+      function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(";").shift();
+      }
+
+      (function () {
+        if (getCookie("dark-mode") == "On") {
+          document.documentElement.classList.add("dark");
+        } else if (getCookie("dark-mode") === "Off") {
+          document.documentElement.classList.remove("dark");
+        } else if (window.matchMedia) {
+          if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            SetCookies("On");
+            document.documentElement.classList.add("dark");
+          } else {
+            SetCookies("Off");
+            document.documentElement.classList.remove("dark");
+          }
+        }
+      })();
+    </script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <title>On bordinng</title>
+    <style>
+      .triangle,
+      .triangle::before {
+        width: 0;
+        height: 0;
+        border-top-width: 70px;
+        border-top-style: solid;
+        border-top-color: transparent;
+        border-right-width: 70px;
+        border-right-style: solid;
+        border-right-color: black;
+        position: relative;
+        cursor: pointer;
+        transition: 150ms;
+      }
+      .triangle::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-right-color: black;
+      }
+      .triangle a:hover {
+        text-decoration: underline;
+      }
+      /* //////////////////////////////// */
+
+      .shap-one {
+        transform: rotateZ(-45deg);
+        top: 32px;
+        left: 4px;
+      }
+      .shap-one::before {
+        border-right-color: #60d669;
+        top: -64px;
+        left: -2px;
+      }
+      .shap-one > div {
+        transform: rotateZ(44deg);
+        top: -26px;
+        left: 25px;
+      }
+      /* //////////////////////////////// */
+
+      .shap-tow {
+        transform: rotateZ(136deg);
+        top: 60px;
+        left: 58px;
+      }
+      .shap-tow::before {
+        border-right-color: #ed8627;
+        top: -73px;
+        left: 6px;
+      }
+      .shap-tow > div {
+        transform: rotateZ(-136deg);
+        top: -71px;
+        left: 12px;
+      }
+      /* //////////////////////////////// */
+
+      .shap-there {
+        transform: rotateZ(-45deg);
+        top: 89px;
+        left: 4px;
+      }
+      .shap-there::before {
+        border-right-color: #35c5f0;
+        top: -64px;
+        left: -2px;
+      }
+      .shap-there > div {
+        transform: rotateZ(44deg);
+        top: -38px;
+        left: 29px;
+      }
+      /* //////////////////////////////// */
+
+      /* .backBu {
+                padding: 20px 50px;
+            }
+            .backBu > a {
+                color: black;
+                font-size: 20px;
+                font-weight: 600;
+            } */
+    </style>
+  </head>
+  <body
+    class="dark:bg-slate-900 bg-white dark:text-white flex flex-col min-h-screen font-[Poppins,sans-serif]"
+  >
+    <div class="backBu py-10 px-20">
+      <a class="text-lg font-semibold" href="./index.html">Back</a>
+    </div>
+    <section class="flex items-center justify-center flex-col pt-10 mb-20">
+      <div
+        class="w-[85%] sm:w-[400px] md:w-[500px] lg:w-[600px] xl:w-[700px] my-10"
+      >
+        <h2 class="text-3xl font-semibold max-sm:text-2xl text-left mb-5">
+          Progress to join us in all groups of Yaqeen.
+        </h2>
+        <p class="text-center py-3">
+          By joining us, different experiences and opinions will be shared in
+          the construction process in yaqeen, and you will have to know your
+          duties and obligations towards yaqeen
+        </p>
+      </div>
+      <div class="min-w-[700px] max-w-[1000px]">
+        <img class="dark:hidden" src="./public/svgs/plan.png" alt="plan" />
+        <img
+          class="hidden dark:block"
+          src="./public/svgs/planLight.png"
+          alt="plan"
+        />
+      </div>
+      <div class="text-left w-full pl-[10%]">
+        <div class="triangle shap-one">
+          <div class="absolute text-sm font-medium">
+            <span>01</span>
+            <a href="https://chat.whatsapp.com/DCIX2vPZYjhJpTnOt3abgA">
+              <span>WhatsApp group</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="triangle shap-tow">
+          <div class="absolute text-sm font-medium max-w-max">
+            <span>02</span>
+            <a href="https://app.clickup.com/9007164936/v/s/90070394290">
+              <span>ClickUp group</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="triangle shap-there">
+          <div class="absolute text-sm font-medium">
+            <span>03</span>
+            <a href="https://join.slack.com/t/yaqeenadel/shared_invite/zt-1zjw0aomd-SsO_Br2qfCOMFCFwFBEwNg">
+              <span>Slack group</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

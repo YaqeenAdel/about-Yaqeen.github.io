@@ -6,13 +6,65 @@
   <script>document.getElementsByTagName("html")[0].className += " js";</script>
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Yaqeen Weekly Meetings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./public/css/globle.css" />
+  
+  <!-- You can add your own fonts from fonts.google.com -->
+  <link
+  href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+  rel="stylesheet"
+  />
+
+  <!-- Default Script tags -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function SetCookies(value){
+      var expiryDate = new Date();
+      expiryDate.setMonth(expiryDate.getMonth() + 1);
+      document.cookie = `dark-mode=${value}; expires=${expiryDate}; path=/`
+    }
+    
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`);
+      if (parts.length === 2) return parts.pop().split(';').shift();
+    } 
+    
+    
+    (function () {
+      if (getCookie('dark-mode') == "On") {
+        document.documentElement.classList.add("dark");
+      }
+      else if (getCookie('dark-mode') === "Off") {
+        document.documentElement.classList.remove("dark");
+      }else if (window.matchMedia) {
+        if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+          SetCookies('On')
+          document.documentElement.classList.add("dark")
+        }else{
+          SetCookies('Off')
+          document.documentElement.classList.remove("dark")
+        }
+      }
+    
+    })();
+  </script>
+   <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
 </head>
-<body>
+<body class="dark:bg-slate-900 bg-white dark:text-white min-h-screen font-[Poppins,sans-serif]">
+  <div class="backBu py-10 px-20">
+    <a class="text-lg font-semibold" href="../index.html">Back</a>
+  </div>
   <header class="cd-main-header text-center flex flex-column flex-center">
  
 
-    <h1 class="margin-top-md margin-bottom-xl">Welcome To Yaqeen Weekly Meetings</h1>
-    <h6 class="l">All Meetings are in Cairo Local Time</h6>
+    <h1 class="margin-y-sm dark:text-white">Welcome To Yaqeen Weekly Meetings</h1>
+    <h6 class="margin-bottom-md">All Meetings are in Cairo Local Time</h6>
 
   </header>
 

@@ -11,10 +11,10 @@
       name="description"
       content="A Free and open-source documentation template built using html, tailwindcss and javascript."
     />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <link rel="stylesheet" href="./public/css/globle.css" />
+    
     <!-- You can add your own fonts from fonts.google.com -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -24,7 +24,7 @@
     <!-- Default Script tags -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./public/js/index.js"></script>
-
+    
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -32,91 +32,79 @@
     </script>
 
     <!-- Replace the title name -->
-    <title>About Yaqeen</title>
+    <title>Yaqeen</title>
   </head>
 
   <!-- Change the font-family to our choice -->
-  <body
-    style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
-    class="dark:bg-slate-900 bg-white dark:text-white"
+  <body class="dark:bg-slate-900 bg-white dark:text-white flex flex-col min-h-screen font-[Poppins,sans-serif]"
   >
     <!-- Header start here -->
-    <header class="w-full p-3 border-b dark:border-b  flex">
+    <header class="w-full p-3 flex sticky top-0 dark:bg-slate-900 bg-white">
       <nav
-        class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start dark:text-white"
+        class="w-full flex flex-col sm:flex-row sm:justify-around dark:text-white sm:items-center sm:h-10"
       >
-        <ul>
+        <ul class="w-40 text-center grow">
           <!-- You can change your logo name -->
-          <li class="font-mono text-xl">
-            Yaqeen
+          <li class="font-mono text-xl  font-bold cursor-pointer cursor-pointer">
+            <a href="index.html">Yaqeen</a>
           </li>
         </ul>
-        <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
-          <li
-            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
-          >
-            <a href="./docs.html">About Yaqeen</a>
-          </li>
-          <li
-            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
-          >
-            <a href="#contributors">Contribution</a>
-          </li>
-      </li>
-          <li
-            class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0"
-          >
-            <a href="./schedual/index.html">Meetings</a>
-          </li>
-          <div>
-            <ul class="flex">
-              <!-- Change the href link to your respective social media accounts-->
-              <li class="mr-5 flex dark:hidden" >
-                <p onclick="darkmode()">
-                  <img src="./public/svgs/sun.svg" alt="sun Link" />
-                </p>
-              </li>
-              <li class="mr-5 hidden dark:flex" >
-                <p onclick="lightmode()">
-                  <img src="./public/svgs/sun-dark.svg" alt="sun Link" />
-                </p>
-              </li>
-              <li class="mr-5 flex dark:hidden" >
-                <a href="https://github.com/YaqeenAdel"
-                  ><img src="./public/svgs/github.svg" alt="GitHub Link"
-                /></a>
-              </li>
-              <li class="mr-5 hidden dark:flex" >
-                <a href="https://github.com/YaqeenAdel"
-                  ><img src="./public/svgs/github-dark.svg" alt="GitHub Link"
-                /></a>
-              </li>
-              <li class="mr-5 flex dark:hidden" >
-                <a href="#Twitter"
-                  ><img src="./public/svgs/twitter.svg" alt="Twitter Link"
-                /></a>
-              </li>
-              <li class="mr-5 hidden dark:flex" >
-                <a href="#Twitter"
-                  ><img src="./public/svgs/twitter-dark.svg" alt="Twitter Link"
-                /></a>
-              </li>
-              <li class="flex dark:hidden" >
-                <a href="#Youtube"
-                  ><img src="./public/svgs/youtube.svg" alt="YouTube Link"
-                /></a>
-              </li>
-              <li class="hidden dark:flex" >
-                <a href="#Youtube"
-                  ><img src="./public/svgs/youtube-dark.svg" alt="YouTube Link"
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </ul>
+        <div id="header-nav" class="hidden max-sm:w-full sm:flex grow sm:justify-around">
+          <ul class="flex max-sm:mt-5 max-sm:flex-col max-sm:items-center gap-6 mr-3">
+            <li class="mb-3 sm:mb-0 hover:text-[#4F4F4F] dark:hover:text-slate-300 transition duration-150">
+                <a href="./bording.html">On bording</a>
+            </li>
+            <li class="mb-3 sm:mb-0 hover:text-[#4F4F4F] dark:hover:text-slate-300 transition duration-150">
+              <a href="./schedual/index.html">Meetings</a>
+            </li>
+          </ul>
+          <ul class="flex max-sm:my-8 max-sm:justify-center gap-6">
+            <!-- Change the href link to your respective social media accounts-->
+            <li class="flex dark:hidden cursor-pointer" >
+              <p onclick="darkmode()">
+                <img src="./public/svgs/sun.svg" alt="sun Link" />
+              </p>
+            </li>
+            <li class="hidden dark:flex cursor-pointer" >
+              <p onclick="lightmode()">
+                <img src="./public/svgs/sun-dark.svg" alt="sun Link" />
+              </p>
+            </li>
+            <li class="flex dark:hidden" >
+              <a href="#Github"
+                ><img src="./public/svgs/github.svg" alt="GitHub Link"
+              /></a>
+            </li>
+            <li class="hidden dark:flex" >
+              <a href="#Github"
+                ><img src="./public/svgs/github-dark.svg" alt="GitHub Link"
+              /></a>
+            </li>
+            <li class="flex dark:hidden" >
+              <a href="#Twitter"
+                ><img src="./public/svgs/twitter.svg" alt="Twitter Link"
+              /></a>
+            </li>
+            <li class="hidden dark:flex" >
+              <a href="#Twitter"
+                ><img src="./public/svgs/twitter-dark.svg" alt="Twitter Link"
+              /></a>
+            </li>
+            <li class="flex dark:hidden" >
+              <a href="#Youtube"
+                ><img src="./public/svgs/youtube.svg" alt="YouTube Link"
+              /></a>
+            </li>
+            <li class="hidden dark:flex" >
+              <a href="#Youtube"
+                ><img src="./public/svgs/youtube-dark.svg" alt="YouTube Link"
+              /></a>
+            </li>
+          </ul>
+        </div>
       </nav>
 
-      <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+      <div class="sm:hidden" onclick="OnclickOpenMenu()" id="open-menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -130,7 +118,7 @@
           />
         </svg>
       </div>
-      <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+      <div class="hidden sm:hidden"  onclick="OnclickCloseMenu()" id="close-menu">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="h-6 w-6"
@@ -150,193 +138,124 @@
     <!-- Header ends here -->
 
     <!-- Documentation Title and Description start here -->
-    <div class="bg-gradient-to-r from-[#0F2027] to-[#2C5364] p-10">
-      <div class="w-full items-center flex justify-center flex-col">
-        <p class="text-3xl text-white">About Yaqeen</p>
-        <!-- Change Description as per your information -->
-        <p
-          class="font-sans text-white text-center w-[300px] lg:w-[700px] md:w-[700px] sm:w-[600px] mt-4"
-        >
-       If you are interested in volunteering with Yaqeen and being part of our dedicated team, please complete this survey.
-
-
+    <div class="items-left">
+      <div class="min-h-[25vh] py-3 flex pl-[10%] flex-col justify-center">
+        <p class="text-4xl">About Yaqeen</p>
+        <p class="mt-4 w-[85%] max-sm:text-sm sm:w-[400px] md:w-[500px] lg:w-[600px] xl:w-[700px]" >
+          If you are interested in volunteering with Yaqeen and being part of our dedicated team, please complete this survey.
         </p>
       </div>
+      <!-- Document title and description ends here -->
+      <div class="w-full text-white min-h-[40vh] gap-6 flex py-3 pl-[10%] flex-col justify-center bg-gradient-to-r from-[#0F2027] to-[#2C5364]">
+        <p class="text-5xl py-5 sm:w-[600px]">Click Here To Complete The Survey!</p>
+        <a
+          href="https://forms.microsoft.com/pages/responsepage.aspx?id=wKMl1dipKE2eWUA1j3dPCdD62Pd6UCxBkBxxL_z3AsFURVpRTkVPMVhNWlI3MlRDUTRCQ1g3WE02NC4u"
+          class="h-50 bg-red-600 p-2 w-44 text-center font-semibold active:scale-90 transition duration-150"
+        >
+          Get Started
+        </a>
+      </div>
     </div>
-    <!-- Document title and description ends here -->
 
-    <div class="w-full flex justify-center p-6 flex-col items-center">
-      <p class="p-5 text-xl">Click Here To Complete The Survey!</p>
-      <a
-        href="https://forms.microsoft.com/pages/responsepage.aspx?id=wKMl1dipKE2eWUA1j3dPCdD62Pd6UCxBkBxxL_z3AsFURVpRTkVPMVhNWlI3MlRDUTRCQ1g3WE02NC4u"
-        class="text-white h-50 bg-red-600 p-2 w-44 rounded text-center"
-      >
-        Get Started
-      </a>
-    </div>
     <div class="flex flex-col md:flex-row lg:flex-row">
-      <!-- Side menu starts here -->
-      <nav
-        class="flex ml-10 mt-7 md:fixed lg:fixed"
-        data-spy="affix"
-        data-offset-top="300"
-        data-offset-bottom="200"
-        role="navigation"
-      >
-        <ul class="nav">
-          <li class="font-medium"><a href="#link1">Who are we?</a></li>
-          <li class="font-medium">
-            <a href="#link2">What are we trying to build?</a>
- 
-          </li>
-          <li class="font-medium"><a href="#link3">Why is this important?
-</a></li>
-          <li class="font-medium">
-            <a href="#link4">What are we looking for?
-</a>
-            <ul class="nav">
-     
-          <li class="font-medium"><a href="#link5">What will you do as a volunteer?
-</a></li>
-          <li class="font-medium"><a href="#link7">What qualities are we seeking in team members?
-</a></li>
-          <li class="font-medium"><a href="#link6">Who inspired us to start this initiative?
-
-</a></li>
- 
-
-        </ul>
-      </nav>
-      <!-- Side Menu ends here -->
-
-      <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+      <div class="pl-[10%]">
         <!-- Link1 start -->
-        <section id="link1">
+        <section class="mb-8">
           <div class="h-full mt-10">
-            <p class="font-normal text-2xl">Who are we?</p>
-            <p class="leading-0 w-3/4">
+            <p class="font-normal text-2xl mb-5">Who are we?</p>
+            <p class="w-[90%] md:w-[600px] lg:w-[700px] text-sm">
               Yaqeen is a non-profit initiative dedicated to supporting cancer patients and their families on their journey to recovery. Our mission is to provide comprehensive information, emotional support, and resources through a mobile application and digital platform.
             </p>
-            <p class="text-sm pt-5 pb-4"></p>
           </div>
         </section>
         <!-- Link1 end -->
 
         <!-- Link2 Start -->
-        <section id="link2">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">What are we trying to build?</p>
-            <p class="text-sm pb-4">We are building a groundbreaking platform that empowers cancer patients, caregivers, and survivors by offering a wide range of tools, resources, and a supportive community. Our goal is to enhance the quality of life for those affected by cancer and make a meaningful impact.
-
-</p>
+        <section class="mb-8">
+          <div class="h-full">
+            <p class="font-normal text-2xl mb-5">What are we trying to build?</p>
+            <p class="w-[90%] md:w-[600px] lg:w-[700px] text-sm">
+              We are building a groundbreaking platform that empowers cancer patients, caregivers, and survivors by offering a wide range of tools, resources, and a supportive community. Our goal is to enhance the quality of life for those affected by cancer and make a meaningful impact.
+            </p>
           </div>
-                </section>
+        </section>
         <!-- Link2 Ends -->
 
         <!-- Link3 start -->
-        <section id="link3">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">Why is this important?</p>
-            <p class="leading-0 w-3/4">
-        Cancer affects millions of lives worldwide, and we believe that everyone battling this disease deserves the best possible support. By joining Yaqeen, you can contribute to a noble cause and help improve the lives of countless individuals and their families.
-
-
+        <section class="mb-8">
+          <div class="h-full">
+            <p class="font-normal text-2xl mb-5">Why is this important?</p>
+            <p class="w-[90%] md:w-[600px] lg:w-[700px] text-sm">
+              Cancer affects millions of lives worldwide, and we believe that everyone battling this disease deserves the best possible support. By joining Yaqeen, you can contribute to a noble cause and help improve the lives of countless individuals and their families.
             </p>
-            <p class="text-sm pt-5 pb-4">What are we looking for?</p>
           </div>
         </section>
         <!-- Link3 end -->
 
         <!-- Link4 start -->
-        <section id="link4">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">What are we looking for?</p>
-            <p class="text-sm pt-2 pb-4">We are seeking passionate individuals who share our vision and are dedicated to making a difference. Whether you have experience in software development, design, marketing, content creation, or community management, we welcome your skills and commitment.
-
-</p>
+        <section class="mb-8">
+          <div class="h-full">
+            <p class="font-normal text-2xl mb-5">What are we looking for?</p>
+            <p class="w-[90%] md:w-[600px] lg:w-[700px] text-sm">
+              We are seeking passionate individuals who share our vision and are dedicated to making a difference. Whether you have experience in software development, design, marketing, content creation, or community management, we welcome your skills and commitment.
+            </p>
           </div>
-<!---->          <!-- Cards ends -->
         </section>
         <!-- Link4 end -->
 
-        <!-- Link4 start -->
-        <section id="link4">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">What will you do as a volunteer?
-
-</p>
-            <p class="text-sm pt-2 pb-4">You will have the opportunity to work closely with our dynamic team and contribute to various aspects of the project. Your role may involve tasks such as software development, user experience design, content creation, community engagement, or marketing.
-
-
-</p>
+        <!-- Link5 start -->
+        <section class="mb-8">
+          <div class="h-full">
+            <p class="font-normal text-2xl mb-5">
+              What will you do as a volunteer?
+            </p>
+            <p class="w-[90%] md:w-[600px] lg:w-[700px] text-sm">
+              You will have the opportunity to work closely with our dynamic team and contribute to various aspects of the project. Your role may involve tasks such as software development, user experience design, content creation, community engagement, or marketing.
+            </p>
           </div>
-<!---->          <!-- Cards ends -->
         </section>
-        <!-- Link4 end -->
-        <!-- Link4 start -->
-        <section id="link4">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">What qualities are we seeking in team members?
-</p>
+        <!-- Link5 end -->
+        <!-- Link6 start -->
+        <section class="mb-8">
+          <div class="h-full">
+            <p class="font-normal text-2xl mb-5">What qualities are we seeking in team members?</p>
+            <p class="w-[90%] md:w-[600px] lg:w-[700px] text-sm">
+              - Passion for making a positive impact in the lives of cancer patients and their families.<br>
+              - Strong commitment and reliability in meeting project goals and deadlines.<br>
+              - Excellent teamwork and communication skills to collaborate effectively with the team and stakeholders.<br>
+              - Relevant skills and experience in your area of interest.<br>
+              - Adaptability and a willingness to learn and grow with the project.
+            </p>
+          </div>
+        </section>
+        <!-- Link6 end -->
+        <!-- Link7 start -->
+        <section class="mb-8">
+          <div class="h-full">
+            <p class="font-normal text-2xl mb-5">Who inspired us to start this initiative?</p>
+            <p class="w-[90%] md:w-[600px] lg:w-[700px] text-sm">
+              Adel Shabaan's unwavering dedication and vision for supporting cancer patients touched our hearts deeply. Despite facing his own challenges, Adel selflessly sowed the seeds of hope and compassion. His legacy inspires us to carry forward his mission with unwavering determination and to make a lasting impact in the lives of those affected by cancer.
+            </p>
+          </div>
+        </section>
+        <!-- Link7 end -->
+        <!-- Reference Start -->
+        <section class="border-l-[2px] mt-16">
+          <div class="h-full mt-3 ml-5">
+            <p class="font-normal text-xl">AdelShabaan story</p>
             <p class="text-sm pt-2 pb-4">
-- Passion for making a positive impact in the lives of cancer patients and their families.<br>
-
-- Strong commitment and reliability in meeting project goals and deadlines.<br>
-
-- Excellent teamwork and communication skills to collaborate effectively with the team and stakeholders.<br>
-
-- Relevant skills and experience in your area of interest.<br>
-
-- Adaptability and a willingness to learn and grow with the project.
-
-
-</p>
+              Link:
+              <a
+                class="underline"
+                href="https://www.youtube.com/watch?v=Q7MFwYe2k-U"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Click Here</a
+              >
+            </p>
           </div>
-<!---->          <!-- Cards ends -->
         </section>
-        <!-- Link4 end -->
-     <!-- Link4 start -->
-        <section id="link9">
-          <div class="h-full mt-5">
-            <p class="font-normal text-2xl">Who inspired us to start this initiative?
-
-</p>
-            <p class="text-sm pt-2 pb-4">
-Adel Shabaan's unwavering dedication and vision for supporting cancer patients touched our hearts deeply. Despite facing his own challenges, Adel selflessly sowed the seeds of hope and compassion. His legacy inspires us to carry forward his mission with unwavering determination and to make a lasting impact in the lives of those affected by cancer.
-
-
-
-</p>
-          </div>
-<!---->          <!-- Cards ends -->
-        </section>
-        <!-- Link4 end -->
-        <!-- Link5 starts -->
-        <section id="link5">
-
-
-          <!-- Reference Start -->
-          <section id="link5_1" class="border-l-[2px]">
-            <div class="h-full mt-3 ml-5">
-              <p class="font-normal text-xl">AdelShabaan story</p>
-              <p class="text-sm pt-2 pb-4">
-                Link:
-                <a
-                  class="underline"
-                  href="https://www.youtube.com/watch?v=Q7MFwYe2k-U"
-                  target="_blank"
-                  >Click Here</a
-                >
-              </p>
-            </div>
-          </section>
-          <!-- Reference ends -->
-        </section>
-        <!-- Link5 ends -->
-
-        <!-- Link6 starts -->
-
-        <!-- Link6 ends -->
+        <!-- Reference ends -->
       </div>
     </div>
 
