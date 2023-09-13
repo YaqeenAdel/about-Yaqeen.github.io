@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "69c7cb0f-cda8-42cc-9c2f-644070e955f6",
+		"name": "Yaqeen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9504554",
+		"_collection_link": "https://orange-resonance-6862.postman.co/workspace/Yaqeen~d0238384-7631-4418-952b-9916be81c334/collection/9504554-69c7cb0f-cda8-42cc-9c2f-644070e955f6?action=share&source=collection_link&creator=9504554"
+	},
+	"item": [
+		{
+			"name": "Me",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://yaqeen-neon.hasura.app/api/rest/me",
+					"protocol": "https",
+					"host": [
+						"yaqeen-neon",
+						"hasura",
+						"app"
+					],
+					"path": [
+						"api",
+						"rest",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUMTFabG5RNTluZ0FNeU1VNm93QyJ9.eyJodHRwczovL2hhc3VyYS5pby9qd3QvY2xhaW1zIjp7IngtaGFzdXJhLWRlZmF1bHQtcm9sZSI6InVzZXIiLCJ4LWhhc3VyYS1hbGxvd2VkLXJvbGVzIjpbInVzZXIiXSwieC1oYXN1cmEtdXNlci1pZCI6Imdvb2dsZS1vYXV0aDJ8MTAzNTM0NzA0NjY5NzA2OTE4NDMxIn0sImlzcyI6Imh0dHBzOi8veWFxZWVuLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMzUzNDcwNDY2OTcwNjkxODQzMSIsImF1ZCI6WyJodHRwczovL3lhcWVlbi1uZW9uLmhhc3VyYS5hcHAvdjEvZ3JhcGhxbCIsImh0dHBzOi8veWFxZWVuLmV1LmF1dGgwLmNvbS91c2VyaW5mbyJdLCJpYXQiOjE2OTQ0NzgxMTAsImV4cCI6MTY5NDQ4NTMxMCwiYXpwIjoiYkplV1ZBeDdidzdyTlZDa0J4cm1CVWV2dDJvNHd5bVUiLCJzY29wZSI6Im9wZW5pZCBlbWFpbCJ9.TvkDiuVCyDnEkDOCt08oRCp_mBKh1lvzLxlefe0xIUKhXuP-2bDxQvb8muOXx9JdwOkFoB-iBG7Vw7e63hE4ILfCUPBU3p5qWd9ozqCS-utaPN8MjJbqdSuQbb_J3uzsdZnExlMQ6Vgip7fFIG-GcUWQ3FnJhUIMtx3kdOlxjSYDkKEQw8iQfl3drCsqMT3jjYJC3UylmqVvN1IZGqrL0T5FaRoSt1Vma4X1hw_MACz7cGG345SUBtLRFs1zpSsZ1jjclwkc-ewZjcj3RtPGBEMaVBG6QaK3M8mZPl6UhoGvZqnAxg3Epb8WlIjWiSU8_a8ePVdULcFfljxke-xsfw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
