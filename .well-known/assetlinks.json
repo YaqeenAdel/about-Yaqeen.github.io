@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.cancer.yaqeen",
+    "sha256_cert_fingerprints":
+    ["F3:3D:4C:59:38:DB:BD:5D:58:C9:32:46:D9:52:6A:A9:50:39:27:BB:38:8C:F1:E1:68:79:76:54:11:24:3C:2B"]
+  }
+}]
